@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const taskRoutes = require("./Routes/tasks");
 require("dotenv").config();
 
 const authRoutes = require("./Routes/auth");
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/tasks", taskRoutes);
 
 // Root test route (optional)
 app.get("/", (req, res) => {

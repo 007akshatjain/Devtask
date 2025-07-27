@@ -22,7 +22,7 @@ function App() {
           }
         />
         <Route
-          path="/login" //made change here to match the login route
+          path="/login" //made change here
           element={<Login onLogin={() => setIsLoggedIn(true)} />}
         />
         <Route

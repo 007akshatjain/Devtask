@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // your backend URL
+  baseURL: 'https://devtask-q7m5.onrender.com/', // your backend URL
 });
 
 // Interceptor to attach token to every request

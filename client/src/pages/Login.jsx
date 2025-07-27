@@ -8,7 +8,7 @@ import {
   Box,
   Alert
 } from "@mui/material";
-import axios from "axios";
+import API from "../api"; // Adjust the import path as necessary
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -25,7 +25,8 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", form);
+      const res = await API.post("/auth/login", form);
+
       const { token } = res.data;
 
       localStorage.setItem("token", token);
